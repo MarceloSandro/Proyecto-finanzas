@@ -82,7 +82,12 @@ scale = st.radio("Escala del gráfico", ["Lineal", "Logarítmica"], horizontal=T
 # ===============================
 # 🔹 Función de carga de datos robusta
 # ===============================
-# linea para detectar error , luego sacar
+days_range = (end_date - start_date).days
+if days_range <= 7:
+    interval = "1h"
+else:
+    interval = "1d"
+
 st.write(f"Rango de días: {days_range}, Intervalo usado: {interval}")
 #...............
 @st.cache_data
