@@ -1,6 +1,7 @@
-numpy>=1.26.0
-pandas==2.0.3
-streamlit==1.30.0
+streamlit
+numpy<2
+pandas>=1.5,<2.2
 yfinance==0.2.28
+
 
 
