@@ -82,6 +82,9 @@ scale = st.radio("Escala del gráfico", ["Lineal", "Logarítmica"], horizontal=T
 # ===============================
 # 🔹 Función de carga de datos robusta
 # ===============================
+# linea para detectar error , luego sacar
+st.write(f"Rango de días: {days_range}, Intervalo usado: {interval}")
+#...............
 @st.cache_data
 def load_data(tickers, start, end):
     """Descarga precios de cierre y devuelve df + tickers inválidos"""
